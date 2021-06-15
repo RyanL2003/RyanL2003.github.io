@@ -1,0 +1,47 @@
+h1 {
+    font-size: 300%;
+    margin-top: 1.5ex;
+    color: darkblue;
+    text-align: center;
+}
+h2 {
+    font-size: 250%;
+    margin-top: -15pt;
+    color:darkblue;
+    text-align: center;
+}
+h3 {
+    font-size: 120%;
+    margin-top: 5pt;
+    color: darkblue;
+    text-align: center;
+}
+body {
+    background-color: aliceblue;
+}
+p {
+    font-size: 120%;
+    margin: 10pt;
+}
+a {
+    text-decoration: none;
+}
+.listlinks {
+    font-size: 150%;
+    color: darkblue;
+}
+a:hover {
+    background-color:lightblue;
+}
+a:visited {
+    color:darkblue;
+}
+
+.elementborder {
+    background-color: lightblue;
+    vertical-align: top;
+    clear: both;
+    display: inline-block;
+    margin: 3ex 1em;
+    text-align: center;
+}
