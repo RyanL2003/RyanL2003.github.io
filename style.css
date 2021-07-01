@@ -1,10 +1,15 @@
 @font-face {
     font-family: Vollkorn;
-    src: url(vollkorn_regular.ttf);
+    src: url(fonts/vollkorn_regular.ttf);
+}
+@font-face {
+    font-family: Vollkorn;
+    src: url(fonts/vollkorn_medium.ttf);
+    font-weight: bold;
 }
 @font-face {
     font-family: Spectral;
-    src: url(spectral_regular.ttf);
+    src: url(fonts/spectral_regular.ttf);
 }
 h1 {
     font-family: Vollkorn;
@@ -17,7 +22,7 @@ h2 {
     font-family: Vollkorn;
     font-size: 250%;
     margin-top: -15pt;
-    color:darkblue;
+    color: darkblue;
     text-align: center;
 }
 h3 {
@@ -36,17 +41,19 @@ p {
 }
 a {
     text-decoration: none;
+    color: darkblue;
 }
 .listlinks {
     font-family: Vollkorn;
     font-size: 150%;
     color: darkblue;
+    font-weight: bold;
 }
 a:hover {
     background-color:lightblue;
 }
 a:visited {
-    color:darkblue;
+    /*color:darkblue;*/
 }
 
 .elementborder {
