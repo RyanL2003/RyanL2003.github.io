@@ -10,6 +10,7 @@ h1 {
     text-align: center;
 }
 h2 {
+    font-family: 'Vollkorn';
     font-size: 250%;
     margin-top: -15pt;
     color:darkblue;
@@ -32,6 +33,7 @@ a {
     text-decoration: none;
 }
 .listlinks {
+    font-family: Vollkorn;
     font-size: 150%;
     color: darkblue;
 }
