@@ -7,21 +7,21 @@
     src: url(spectral_regular.ttf);
 }
 h1 {
-    font-family: Spectral;
+    font-family: Vollkorn;
     font-size: 300%;
     margin-top: 1.5ex;
     color: darkblue;
     text-align: center;
 }
 h2 {
-    font-family: Spectral;
+    font-family: Vollkorn;
     font-size: 250%;
     margin-top: -15pt;
     color:darkblue;
     text-align: center;
 }
 h3 {
-    font-family: Spectral;
+    font-family: Vollkorn;
     font-size: 120%;
     margin-top: 5pt;
     color: darkblue;
@@ -38,7 +38,7 @@ a {
     text-decoration: none;
 }
 .listlinks {
-    font-family: Spectral;
+    font-family: Vollkorn;
     font-size: 150%;
     color: darkblue;
 }
