@@ -50,7 +50,9 @@ a {
     font-weight: bold;
 }
 a:hover {
-    background-color:lightblue;
+    /*background-color:lightblue;*/
+    text-decoration: underline;
+    text-decoration-color: blue;
 }
 a:visited {
     /*color:darkblue;*/
