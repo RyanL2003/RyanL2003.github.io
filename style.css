@@ -3,11 +3,11 @@
     src: url(vollkorn_regular.ttf);
 }
 @font-face {
-    font-family Spectral;
+    font-family: Spectral;
     src: url(spectral_regular.ttf);
 }
 h1 {
-    font-family: Vollkorn;
+    font-family: Spectral;
     font-size: 300%;
     margin-top: 1.5ex;
     color: darkblue;
