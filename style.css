@@ -2,6 +2,10 @@
     font-family: Vollkorn;
     src: url(vollkorn_regular.ttf);
 }
+@font-face {
+    font-family Spectral;
+    src: url(spectral_regular.ttf);
+}
 h1 {
     font-family: Vollkorn;
     font-size: 300%;
