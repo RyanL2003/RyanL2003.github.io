@@ -14,13 +14,14 @@ h1 {
     text-align: center;
 }
 h2 {
-    font-family: Vollkorn;
+    font-family: Spectral;
     font-size: 250%;
     margin-top: -15pt;
     color:darkblue;
     text-align: center;
 }
 h3 {
+    font-family: Spectral;
     font-size: 120%;
     margin-top: 5pt;
     color: darkblue;
@@ -37,7 +38,7 @@ a {
     text-decoration: none;
 }
 .listlinks {
-    font-family: Vollkorn;
+    font-family: Spectral;
     font-size: 150%;
     color: darkblue;
 }
