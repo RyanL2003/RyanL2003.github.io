@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'Vollkorn';
+    font-family: Vollkorn;
     src: url(vollkorn_regular.ttf);
 }
 h1 {
-    font-family: 'Vollkorn';
+    font-family: Vollkorn;
     font-size: 300%;
     margin-top: 1.5ex;
     color: darkblue;
     text-align: center;
 }
 h2 {
-    font-family: 'Vollkorn';
+    font-family: Vollkorn;
     font-size: 250%;
     margin-top: -15pt;
     color:darkblue;
