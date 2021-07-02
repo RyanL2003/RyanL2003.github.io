@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\dev",
+    "\\fonts"
   ],
-  "SelectedNode": "\\dev",
+  "SelectedNode": "\\dev\\dev.html",
   "PreviewInSolutionExplorer": false
 }

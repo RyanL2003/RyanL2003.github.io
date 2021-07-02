@@ -17,6 +17,7 @@ h1 {
     margin-top: 1.5ex;
     color: darkblue;
     text-align: center;
+    text-shadow: 1pt 2pt 3pt #bfbfbf;
 }
 h2 {
     font-family: Vollkorn;
@@ -24,6 +25,7 @@ h2 {
     margin-top: -15pt;
     color: darkblue;
     text-align: center;
+    text-shadow: 1pt 2pt 3pt #bfbfbf;
 }
 h3 {
     font-family: Vollkorn;
@@ -52,7 +54,7 @@ a {
 a:hover {
     /*background-color:lightblue;*/
     text-decoration: underline;
-    text-decoration-color: blue;
+    text-decoration-color: darkblue;
 }
 a:visited {
     /*color:darkblue;*/
