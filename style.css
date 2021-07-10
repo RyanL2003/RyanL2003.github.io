@@ -1,16 +1,34 @@
+@font-face {
+    font-family: Vollkorn;
+    src: url(fonts/vollkorn_regular.ttf);
+}
+@font-face {
+    font-family: Vollkorn;
+    src: url(fonts/vollkorn_medium.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Spectral;
+    src: url(fonts/spectral_regular.ttf);
+}
 h1 {
+    font-family: Vollkorn;
     font-size: 300%;
     margin-top: 1.5ex;
     color: darkblue;
     text-align: center;
+    text-shadow: 1pt 2pt 3pt #bfbfbf;
 }
 h2 {
+    font-family: Vollkorn;
     font-size: 250%;
     margin-top: -15pt;
-    color:darkblue;
+    color: darkblue;
     text-align: center;
+    text-shadow: 1pt 2pt 3pt #bfbfbf;
 }
 h3 {
+    font-family: Vollkorn;
     font-size: 120%;
     margin-top: 5pt;
     color: darkblue;
@@ -25,16 +43,21 @@ p {
 }
 a {
     text-decoration: none;
-}
-.listlinks {
-    font-size: 150%;
     color: darkblue;
 }
+.listlinks {
+    font-family: Vollkorn;
+    font-size: 150%;
+    color: darkblue;
+    font-weight: bold;
+}
 a:hover {
-    background-color:lightblue;
+    /*background-color:lightblue;*/
+    text-decoration: underline;
+    text-decoration-color: darkblue;
 }
 a:visited {
-    color:darkblue;
+    /*color:darkblue;*/
 }
 
 .elementborder {
