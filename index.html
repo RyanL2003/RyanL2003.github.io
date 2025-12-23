@@ -33,7 +33,7 @@
 
     .hero {
       position: relative;
-      height: 100vh;
+      height: 80vh;
       overflow: hidden;
       background-color: black;
       color: white;
@@ -60,7 +60,7 @@
 
     .hero p {
       margin-top: 1rem;
-      font-size: 1.0rem; 
+      font-size: 1.2rem; 
       letter-spacing: 0.4em; 
       font-family: 'Libre Baskerville', serif;
       opacity: 0.8;
@@ -76,6 +76,22 @@
       margin: 0 0.5em;
       color: white;
     }
+
+    .india-in { color: #FF9933; }   /* saffron */
+    .india-d  { color: white; }
+    .india-ia { color: #138808; }   /* green */
+
+    .norway-n  { color: red; }  /* red */
+    .norway-o  { color: white; }
+    .norway-r  { color: blue; } /* blue */
+    .norway-w  { color: white; }
+    .norway-ay { color: red; }  /* red */
+
+    .iceland-ic { color: blue; } /* blue */
+    .iceland-e  { color: white; }
+    .iceland-l  { color: red; } /* red */
+    .iceland-a  { color: white; }
+    .iceland-nd { color: blue; } /* blue */
   </style>
 </head>
 <body>
@@ -100,6 +116,43 @@
 <section class="slide" id="slide3" style="background-image: url('photos/india/DSC0081.JPG');"></section>
 -->
 <script>
+
+function resetCountryLabels() {
+  document.querySelectorAll(".country").forEach(el => {
+    el.textContent = el.dataset.country;
+    el.style.color = "white";
+  });
+}
+
+function colorIndiaLabel() {
+  const india = document.querySelector('[data-country="india"]');
+
+  india.innerHTML = `
+    <span class="india-in">in</span><span class="india-d">d</span><span class="india-ia">ia</span>
+  `;
+}
+
+function colorNorwayLabel() {
+  const norway = document.querySelector('[data-country="norway"]');
+
+  norway.innerHTML =
+    '<span class="norway-n">n</span>' +
+    '<span class="norway-o">o</span>' +
+    '<span class="norway-r">r</span>' +
+    '<span class="norway-w">w</span>' +
+    '<span class="norway-ay">ay</span>';
+}
+
+function colorIcelandLabel() {
+  const iceland = document.querySelector('[data-country="iceland"]');
+
+  iceland.innerHTML =
+    '<span class="iceland-ic">ic</span>' +
+    '<span class="iceland-e">e</span>' +
+    '<span class="iceland-l">l</span>' +
+    '<span class="iceland-a">a</span>' +
+    '<span class="iceland-nd">nd</span>';
+}
 
 // Map each country to its images
 const countryImages = {
@@ -141,11 +194,11 @@ const countryImages = {
     'photos/india/DSC0222.JPG',
     'photos/india/DSC0230.JPG',
     'photos/india/DSC0235.JPG',
-    'photos/india/DSC0239.JPG',
-    'photos/india/DSC0241_3.JPG',
-    'photos/india/DSC0245.JPG',
+    //'photos/india/DSC0239.JPG',
+    //'photos/india/DSC0241_3.JPG',
+    //'photos/india/DSC0245.JPG',
     'photos/india/DSC0267.JPG',
-    'photos/india/DSC0268_3.JPG',
+    //'photos/india/DSC0268_3.JPG',
     'photos/india/DSC0268.JPG',
     'photos/india/DSC0269.JPG',
     'photos/india/DSC0271.JPG',
@@ -166,18 +219,18 @@ const countryImages = {
     'photos/india/DSC0335_2.JPG',
     'photos/india/DSC0339.JPG',
     'photos/india/DSC0341.JPG',
-    'photos/india/DSC0346.JPG',
-    'photos/india/DSC0348.JPG',
+    //'photos/india/DSC0346.JPG',
+    //'photos/india/DSC0348.JPG',
     'photos/india/DSC0352_2.JPG',
     'photos/india/DSC0352.JPG',
     'photos/india/DSC0356.JPG',
     'photos/india/DSC0359.JPG',
     'photos/india/DSC0368.JPG',
     'photos/india/DSC0375_2.JPG',
-    'photos/india/DSC0375_3.JPG',
+    //'photos/india/DSC0375_3.JPG',
     'photos/india/DSC0377.JPG',
-    'photos/india/DSC0383.JPG',
-    'photos/india/DSC0385.JPG',
+    //'photos/india/DSC0383.JPG',
+    //'photos/india/DSC0385.JPG',
     'photos/india/DSC0399.JPG',
     'photos/india/DSC0404.JPG',
     'photos/india/DSC0416.JPG',
@@ -225,8 +278,29 @@ const countryImages = {
 const slidesContainer = document.getElementById('slides');
 const heroBg = document.querySelector('.hero-bg');
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i+1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function loadCountry(country) {
-  const images = countryImages[country];
+  resetCountryLabels();
+
+  if (country === "india") {
+    colorIndiaLabel();
+  }
+  if (country === "norway") {
+    colorNorwayLabel();
+  }
+  if (country === "iceland") {
+    colorIcelandLabel();
+  }
+
+  //const images = countryImages[country];
+  const images = shuffle([...countryImages[country]]);
   if (!images) return;
 
   // Clear existing slides
