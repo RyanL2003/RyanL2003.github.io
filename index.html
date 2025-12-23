@@ -60,10 +60,21 @@
 
     .hero p {
       margin-top: 1rem;
-      font-size: 0.8rem; 
+      font-size: 1.0rem; 
       letter-spacing: 0.4em; 
       font-family: 'Libre Baskerville', serif;
       opacity: 0.8;
+    }
+
+    .country {
+      cursor: pointer;
+      margin: 0 0.5em;
+      color: white;
+    }
+
+    .titletext {
+      margin: 0 0.5em;
+      color: white;
     }
   </style>
 </head>
@@ -71,14 +82,88 @@
 
 <section class="slide hero">
   <div class="hero-content">
-    <h1>ryan leal</h1>
-    <p>India</p>
+    <!--<h1>ryan leal</h1>-->
+    <p>
+      <span class="titletext">ryan leal</span>
+      <span class="country" data-country="india">india</span>
+      <span class="country" data-country="norway">norway</span>
+      <span class="country" data-country="iceland">iceland</span>
+    </p>
   </div>
 </section>
 
-<section class="slide" style="background-image: url('photos/india/DSC0027.JPG');"></section>
-<section class="slide" style="background-image: url('photos/india/DSC0035.JPG');"></section>
-<section class="slide" style="background-image: url('photos/india/DSC0081.JPG');"></section>
+<div id="slides"></div>
+
+<!--
+<section class="slide" id="slide1" style="background-image: url('photos/india/DSC0027.JPG');"></section>
+<section class="slide" id="slide2" style="background-image: url('photos/india/DSC0035.JPG');"></section>
+<section class="slide" id="slide3" style="background-image: url('photos/india/DSC0081.JPG');"></section>
+-->
+<script>
+
+// Map each country to its images
+const countryImages = {
+  india: [
+    'photos/india/DSC0027.JPG',
+    'photos/india/DSC0035.JPG',
+    'photos/india/DSC0081.JPG'
+  ],
+  norway: [
+    'photos/norway/DSC0615.JPG',
+    'photos/norway/DSC0619.JPG',
+    'photos/norway/DSC0713.JPG',
+    'photos/norway/DSC0716.JPG',
+    'photos/norway/DSC0718.JPG',
+    'photos/norway/DSC0725.JPG',
+    'photos/norway/DSC0727.JPG',
+    'photos/norway/DSC0730.JPG',
+    'photos/norway/DSC0739.JPG',
+    'photos/norway/DSC0781.JPG',
+    'photos/norway/DSC0785.JPG'
+  ],
+  iceland: [
+    'photos/iceland/img1.jpg',
+    'photos/iceland/img2.jpg',
+    'photos/iceland/img3.jpg'
+  ]
+};
+
+const slidesContainer = document.getElementById('slides');
+const heroBg = document.querySelector('.hero-bg');
+
+function loadCountry(country) {
+  const images = countryImages[country];
+  if (!images) return;
+
+  // Clear existing slides
+  slidesContainer.innerHTML = '';
+  console.log('Loading', images.length, 'slides');
+
+  // Update hero background to first image
+  //heroBg.style.backgroundImage = `url('${images[0]}')`;
+
+  // Create slides dynamically
+  images.forEach(src => {
+    const slide = document.createElement('section');
+    slide.className = 'slide';
+    slide.style.backgroundImage = `url('${src}')`;
+    slidesContainer.appendChild(slide);
+  });
+
+  // Jump back to top for clean transition
+  // window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+// Attach click handlers
+document.querySelectorAll('.country').forEach(el => {
+  el.addEventListener('click', () => {
+    loadCountry(el.dataset.country);
+  });
+});
+
+// Load default country on page load
+loadCountry('india');
+</script>
 
 </body>
 </html>
