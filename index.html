@@ -93,6 +93,10 @@
     .iceland-l  { color: red; } /* red */
     .iceland-a  { color: white; }
     .iceland-nd { color: blue; } /* blue */
+
+    .usa-b { color: blue;}
+    .usa-w { color: white;}
+    .usa-r { color: red;}
   </style>
 </head>
 <body>
@@ -153,6 +157,24 @@ function colorIcelandLabel() {
     '<span class="iceland-l">l</span>' +
     '<span class="iceland-a">a</span>' +
     '<span class="iceland-nd">nd</span>';
+}
+
+function colorusaLabel() {
+  const usa = document.querySelector('[data-country="usa"]');
+
+  usa.innerHTML =
+    '<span class="usa-b">u</span>' +
+    '<span class="usa-w">n</span>' +
+    '<span class="usa-b">i</span>' +
+    '<span class="usa-w">t</span>' +
+    '<span class="usa-b">e</span>' +
+    '<span class="usa-w">d </span>' +
+    '<span class="usa-r">s</span>' +
+    '<span class="usa-w">t</span>' +
+    '<span class="usa-r">a</span>' +
+    '<span class="usa-w">t</span>' +
+    '<span class="usa-r">e</span>' +
+    '<span class="usa-w">s</span>';
 }
 
 // Map each country to its images
@@ -372,6 +394,19 @@ const countryImages = {
     'photos/iceland/DSC0909.JPG',
     'photos/iceland/DSC0912.JPG',
   ],
+  usa: [
+    'photos/usa/DSC0168.JPG',
+    'photos/usa/DSC0205.JPG',
+    'photos/usa/DSC0206.JPG',
+    'photos/usa/DSC0209.JPG',
+    'photos/usa/DSC0210.JPG',
+    'photos/usa/DSC0211.JPG',
+    'photos/usa/DSC0214.JPG',
+    'photos/usa/DSC0217.JPG',
+    'photos/usa/DSC0219.JPG',
+    'photos/usa/DSC0221.JPG',
+    'photos/usa/DSC0223.JPG',
+  ]
 };
 
 const slidesContainer = document.getElementById('slides');
@@ -396,6 +431,9 @@ function loadCountry(country) {
   }
   if (country === "iceland") {
     colorIcelandLabel();
+  }
+  if (country === "usa") {
+    colorusaLabel();
   }
 
   //const images = countryImages[country];
