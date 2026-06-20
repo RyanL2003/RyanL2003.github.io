@@ -94,9 +94,9 @@
     .iceland-a  { color: white; }
     .iceland-nd { color: blue; } /* blue */
 
-    .usa-b { color: blue;}
+    .usa-b { color: #002868;}
     .usa-w { color: white;}
-    .usa-r { color: red;}
+    .usa-r { color: #B22234;}
   </style>
 </head>
 <body>
@@ -109,7 +109,7 @@
       <span class="country" data-country="india">india</span>
       <span class="country" data-country="norway">norway</span>
       <span class="country" data-country="iceland">iceland</span>
-      <span class="country" data-country="usa">united states</span>
+      <span class="country" data-country="united states">united states</span>
     </p>
   </div>
 </section>
@@ -161,7 +161,7 @@ function colorIcelandLabel() {
 }
 
 function colorusaLabel() {
-  const usa = document.querySelector('[data-country="usa"]');
+  const usa = document.querySelector('[data-country="united states"]');
 
   usa.innerHTML =
     '<span class="usa-b">u</span>' +
@@ -433,7 +433,7 @@ function loadCountry(country) {
   if (country === "iceland") {
     colorIcelandLabel();
   }
-  if (country === "usa") {
+  if (country === "united states") {
     colorusaLabel();
   }
 
