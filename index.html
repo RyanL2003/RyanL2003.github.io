@@ -141,6 +141,7 @@
     <!--<h1>ryan leal</h1>-->
     <p>
       <span class="titletext">ryan leal</span>
+      <span class="country" data-country="nepal">nepal</span>
       <span class="country" data-country="india">india</span>
       <span class="country" data-country="norway">norway</span>
       <span class="country" data-country="iceland">iceland</span>
@@ -171,6 +172,11 @@ function colorIndiaLabel() {
   india.innerHTML = `
     <span class="india-in">in</span><span class="india-d">d</span><span class="india-ia">ia</span>
   `;
+}
+
+function colorNepalLabel() {
+  const nepal = document.querySelector('[data-country="nepal"]');
+
 }
 
 function colorNorwayLabel() {
@@ -215,6 +221,100 @@ function colorusaLabel() {
 
 // Map each country to its images
 const countryImages = {
+  nepal: [
+    'photos/nepal/DSC0009.JPG',
+    'photos/nepal/DSC0045.JPG',
+    'photos/nepal/DSC0058.JPG',
+    'photos/nepal/DSC0067.JPG',
+    'photos/nepal/DSC0076.JPG',
+    'photos/nepal/DSC0104.JPG',
+    'photos/nepal/DSC0132.JPG',
+    'photos/nepal/DSC0135.JPG',
+    'photos/nepal/DSC0143.JPG',
+    'photos/nepal/DSC0154.JPG',
+    'photos/nepal/DSC0166.JPG',
+    'photos/nepal/DSC0172.JPG',
+    'photos/nepal/DSC0178.JPG',
+    'photos/nepal/DSC0183.JPG',
+    'photos/nepal/DSC0187.JPG',
+    'photos/nepal/DSC0202.JPG',
+    'photos/nepal/DSC0204.JPG',
+    'photos/nepal/DSC0213.JPG',
+    'photos/nepal/DSC0215.JPG',
+    'photos/nepal/DSC0227.JPG',
+    'photos/nepal/DSC0232.JPG',
+    'photos/nepal/DSC0244.JPG',
+    'photos/nepal/DSC0246.JPG',
+    'photos/nepal/DSC0250.JPG',
+    'photos/nepal/DSC0254.JPG',
+    'photos/nepal/DSC0261.JPG',
+    'photos/nepal/DSC0271.JPG',
+    'photos/nepal/DSC0278.JPG',
+    'photos/nepal/DSC0279.JPG',
+    'photos/nepal/DSC0284.JPG',
+    'photos/nepal/DSC0289.JPG',
+    'photos/nepal/DSC0294.JPG',
+    'photos/nepal/DSC0297.JPG',
+    'photos/nepal/DSC0299.JPG',
+    'photos/nepal/DSC0310.JPG',
+    'photos/nepal/DSC0313.JPG',
+    'photos/nepal/DSC0326.JPG',
+    'photos/nepal/DSC0328.JPG',
+    'photos/nepal/DSC0331.JPG',
+    'photos/nepal/DSC0338.JPG',
+    'photos/nepal/DSC0354.JPG',
+    'photos/nepal/DSC0367.JPG',
+    'photos/nepal/DSC0373.JPG',
+    'photos/nepal/DSC0380.JPG',
+    'photos/nepal/DSC0384.JPG',
+    'photos/nepal/DSC0403.JPG',
+    'photos/nepal/DSC0414.JPG',
+    'photos/nepal/DSC0423.JPG',
+    'photos/nepal/DSC0433.JPG',
+    'photos/nepal/DSC0443.JPG',
+    'photos/nepal/DSC0448.JPG',
+    'photos/nepal/DSC0449.JPG',
+    'photos/nepal/DSC0465.JPG',
+    'photos/nepal/DSC0498.JPG',
+    'photos/nepal/DSC0507.JPG',
+    'photos/nepal/DSC0514.JPG',
+    'photos/nepal/DSC0523.JPG',
+    'photos/nepal/DSC0534.JPG',
+    'photos/nepal/DSC0542.JPG',
+    'photos/nepal/DSC0556.JPG',
+    'photos/nepal/DSC0559.JPG',
+    'photos/nepal/DSC0572.JPG',
+    'photos/nepal/DSC0577.JPG',
+    'photos/nepal/DSC0580.JPG',
+    'photos/nepal/DSC0599.JPG',
+    'photos/nepal/DSC0602.JPG',
+    'photos/nepal/DSC0609.JPG',
+    'photos/nepal/DSC0617.JPG',
+    'photos/nepal/DSC0619.JPG',
+    'photos/nepal/DSC0629.JPG',
+    'photos/nepal/DSC0633.JPG',
+    'photos/nepal/DSC0637.JPG',
+    'photos/nepal/DSC0638.JPG',
+    'photos/nepal/DSC0661.JPG',
+    'photos/nepal/DSC0679.JPG',
+    'photos/nepal/DSC0687.JPG',
+    'photos/nepal/DSC0696.JPG',
+    'photos/nepal/DSC0705.JPG',
+    'photos/nepal/DSC0706.JPG',
+    'photos/nepal/DSC0709.JPG',
+    'photos/nepal/DSC0713.JPG',
+    'photos/nepal/DSC0727.JPG',
+    'photos/nepal/DSC0734.JPG',
+    'photos/nepal/DSC0738.JPG',
+    'photos/nepal/DSC0747.JPG',
+    'photos/nepal/DSC0751.JPG',
+    'photos/nepal/DSC0765.JPG',
+    'photos/nepal/DSC0782.JPG',
+    'photos/nepal/DSC0785.JPG',
+    'photos/nepal/DSC0798.JPG',
+    'photos/nepal/DSC0802.JPG',
+    'photos/nepal/DSC0828.JPG'
+  ],
   india: [
     'photos/india/DSC0010.JPG',
     'photos/india/DSC0027.JPG',
@@ -459,6 +559,9 @@ function shuffle(array) {
 function loadCountry(country) {
   resetCountryLabels();
 
+  if (country === "nepal") {
+    colorNepalLabel();
+  }
   if (country === "india") {
     colorIndiaLabel();
   }
@@ -527,7 +630,7 @@ document.querySelectorAll('.country').forEach(el => {
 });
 
 // Load default country on page load
-loadCountry('india');
+loadCountry('nepal');
 </script>
 
 </body>
