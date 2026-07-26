@@ -117,6 +117,10 @@
     .india-d  { color: white; }
     .india-ia { color: #138808; }   /* green */
 
+    .nepal-b { color:#002868}
+    .nepal-r { color:#DC143C}
+    .nepal-w { color:white}
+
     .norway-n  { color: red; }  /* red */
     .norway-o  { color: white; }
     .norway-r  { color: blue; } /* blue */
@@ -177,6 +181,9 @@ function colorIndiaLabel() {
 function colorNepalLabel() {
   const nepal = document.querySelector('[data-country="nepal"]');
 
+  nepal.innerHTML = `
+    <span class="nepal-b">nep</span><span class="nepal-r">a</span><span class="nepal-w">l</span>
+  `;
 }
 
 function colorNorwayLabel() {
